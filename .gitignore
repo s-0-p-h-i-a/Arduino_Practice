@@ -1,0 +1,23 @@
+# macOS system files
+.DS_Store
+
+
+# Arduino backup or temp files
+*.tmp
+*.bak
+
+# Arduino IDE build and temp files
+*.elf
+*.bin
+*.hex
+*.eep
+*.o
+*.d
+*.bak
+*.tmp
+*.cpp
+*.cc
+
+# Arduino IDE folders
+.build/
+.arduino/
