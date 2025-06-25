@@ -21,11 +21,9 @@
 ---
 ## 📂 Projects
 
-| Project | Description |
-|--------|-------------|
-| `choose_LED_serial` | User chooses LED to light up via serial input. Includes input validation and LED feedback. |
-| *(Upcoming)* `choose_LED_buttons` | Use physical buttons instead of serial input to choose which LED to activate. |
-| *(Upcoming)* `hall_sensor_emulator` | Emulates a flywheel Hall effect sensor using timed pulses. Intended for testing signal processing setups. |
+| Project                                                                                              | Description                                                                                |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [Choose LED via Serial](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Serial) | User chooses LED to light up via serial input. Includes input validation and LED feedback. |
 
 ---
 ## 🧪  Future Project Ideas
