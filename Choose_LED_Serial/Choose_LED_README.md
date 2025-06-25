@@ -4,7 +4,7 @@ This small Arduino project lets the user choose a coloured LED (Red, Blue, Green
 
 ### 🔧 Wiring Diagram
 
-![Breadboard with red, green, and blue LEDs connected to Elegoo UNO](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Serial/Diagrams_and_Demo/choose_led_serial_wiring.png)
+![Breadboard with red, green, and blue LEDs connected to Elegoo UNO](./Diagrams_and_Demo/choose_led_serial_wiring.png)
 
 ---
 ## 💡 Diagrams and Demo:
