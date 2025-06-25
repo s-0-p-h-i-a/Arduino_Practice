@@ -83,9 +83,10 @@ This project was created as part of my embedded systems preparation, with a focu
 
 ```
 Choose_LED_Serial/
-├── choose_LED_serial.ino   # Main program file
-└── Choose_LED_README.md               # This file
-└── Choose_LED_Devlog.md               # Dev Log
+├── Diagrams_and_Demo   			# Tinkercad wiring & circuit diagrams, planned demo video
+└── Choose_LED_Devlog.md            # Dev Log
+└── Choose_LED_README.md            # This file
+└── choose_LED_serial.ino   		# Main program file
 ```
 
 ---
