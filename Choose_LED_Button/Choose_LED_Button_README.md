@@ -4,7 +4,7 @@ This Arduino project lets the user control two LEDs using two physical buttons. 
 
 ### Demo
 
-![Breadboard with two LEDs and two buttons connected to Arduino UNO](./Diagrams/2buttons.gif)
+![Breadboard with two LEDs and two buttons connected to Arduino UNO](https://github.com/s-0-p-h-i-a/Arduino_Practice/blob/main/Choose_LED_Button/Diagrams/2buttons.gif)
 
 ---
 ## Diagram and Schematic:
