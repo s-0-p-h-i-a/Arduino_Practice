@@ -2,9 +2,9 @@
 
 This Arduino project lets the user control two LEDs using two physical buttons. Each button directly controls one LED: press → LED on, release → LED off. Both buttons can be pressed at the same time. The project was designed to explore digital input handling, wiring/debugging basics, and direct real-time hardware interaction.
 
-### Wiring Diagram
+### Demo
 
-![Breadboard with two LEDs and two buttons connected to Arduino UNO](./Diagrams/choose_led_button_diagram.png)
+![Breadboard with two LEDs and two buttons connected to Arduino UNO](./Diagrams/2buttons.gif)
 
 ---
 ## Diagram and Schematic:
