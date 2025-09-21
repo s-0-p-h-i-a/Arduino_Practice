@@ -1,16 +1,16 @@
-# 🔩 **Arduino Projects — Embedded Systems Practice**
+# **Arduino Projects — Embedded Systems Practice**
 
 This repository contains small Arduino-based projects I’ve developed as the first step of my hands-on learning in embedded systems, signal handling, and microcontroller programming. Each project focuses on understanding fundamental hardware–software interaction, building confidence with C++-based logic, and exploring real-world embedded use cases.
 
 ---
-## 🎯 Goals
+## Goals
 
 - Practice input/output handling (serial, digital, analog)  
 - Explore embedded control structures with C++  
 - Gain experience with debugging physical system and code behaviour
 
 ---
-## 📁 Project Structure
+## Project Structure
 
 Each project lives in its own folder and includes:  
 - `.ino` source file(s)  
@@ -18,7 +18,7 @@ Each project lives in its own folder and includes:
 - Diagrams folder with demo GIF, wiring diagram and circuit schematic 
 
 ---
-## 📂 Projects
+## Projects
 
 | Project | Description |
 |--------|-------------|
