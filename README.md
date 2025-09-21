@@ -53,8 +53,4 @@ Each project lives in its own folder and includes:
 - AI-assisted polishing (README, dev logs)  
 - No code/text is published without full review
 
----
-
-**Built with curiosity, wires, and a solderless breadboard.**  
-_This repo documents my journey from first circuits to embedded systems._
 
