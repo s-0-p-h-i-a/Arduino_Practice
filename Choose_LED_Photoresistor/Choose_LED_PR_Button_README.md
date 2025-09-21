@@ -11,7 +11,7 @@ This Arduino project lets the user control two LEDs using either a push button o
 
 - [Wiring diagram PNG](./Diagrams/choose_led_button_pr_wiring.png)
 - [Circuit diagram PDF](./Diagrams/choose_led_button_pr_circuit.pdf)
-- [Demo GIF](./Diagrams/PR_button.gif)
+- [Large demo GIF](./Diagrams/PR_button.gif)
 
 ## Tinkercad:
 - [Diagrams & Simulation](LINK_HERE)
