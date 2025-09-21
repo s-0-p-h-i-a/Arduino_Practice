@@ -4,7 +4,7 @@ This Arduino project lets the user control two LEDs using either a push button o
 
 ### Demo
 
-![Breadboard with two LEDs, one button, and one photoresistor connected to Arduino UNO](./Diagrams/PR_button.gif)
+![Breadboard with two LEDs, one button, and one photoresistor connected to Arduino UNO](./Diagrams/PR_button_small.gif)
 
 ---
 ## Diagrams and Demo:
