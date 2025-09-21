@@ -11,7 +11,7 @@ This Arduino project lets the user control two LEDs using two physical buttons. 
 
 - [Wiring diagram PNG](./Diagrams/choose_led_button_diagram.png)
 - [Circuit diagram PDF](./Diagrams/choose_led_button_schematic.pdf)
-- [Demo GIF](./Diagrams/2buttons.gif)
+- [Large demo GIF](./Diagrams/2buttons.gif)
 
 ## Tinkercad:
 - [Diagrams & Simulation](https://www.tinkercad.com/things/8hhdsi7ccSF-choose-led-via-button?sharecode=HT8KQxKV78Cn7eR4O6T9_MAu6U2ZwfUH0aEMW4jmCiw)
