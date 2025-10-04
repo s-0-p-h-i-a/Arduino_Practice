@@ -2,6 +2,11 @@
 
 This Arduino project lets the user control two LEDs using either a push button or a photoresistor. Each input source can turn on one LED individually, or both LEDs simultaneously blink when both inputs are active. The project explores **digital and analog input handling**, boolean logic, and multi-condition LED control in real time.
 
+### Digital Logic:
+
+This project served as basis for practicing applying digital logic and boolean algebra theory.
+See the [Digital Logic](./Digital_Logic) folder for combinational logic circuit simulation and boolean function analysis.
+
 ### Demo
 
 ![Breadboard with two LEDs, one button, and one photoresistor connected to Arduino UNO](./Diagrams/PR_button_small.gif)
@@ -9,12 +14,12 @@ This Arduino project lets the user control two LEDs using either a push button o
 ---
 ## Diagrams and Demo:
 
-- [Wiring diagram PNG](./Diagrams/choose_led_button_pr_wiring.png)
-- [Circuit diagram PDF](./Diagrams/choose_led_button_pr_circuit.pdf)
+- [Wiring diagram PNG](./Diagrams/choose_led_button_pr_wiring.png) *Coming Soon*
+- [Circuit diagram PDF](./Diagrams/choose_led_button_pr_circuit.pdf) *Coming Soon*
 - [Large demo GIF](./Diagrams/PR_button.gif)
 
 ## Tinkercad:
-- [Diagrams & Simulation](LINK_HERE)
+- [Diagrams & Simulation](LINK_HERE) *Coming Soon*
 
 ---
 ## Components:
