@@ -47,7 +47,7 @@ Although the visible LED behaviour matched the Arduino sketch, the **phase was i
 ### Circuit:
 
 Diagrams of the combinational circuit under different input combinations:
-- [Part 1](part1.md)
+- [Part 1](./part1.md)
 
 ---
 ## Part 2: Boolean Function Analysis
@@ -77,7 +77,7 @@ Analyze the logic circuit’s behaviour mathematically to reinforce Boolean alge
 ### Analysis:
 
 Truth tables and function analysis:
-- [Part 2](part2.md)
+- [Part 2](./part2.md)
 
 ---
 ## From Code to Circuit: Key Learnings

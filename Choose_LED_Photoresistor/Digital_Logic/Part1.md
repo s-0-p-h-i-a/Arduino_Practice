@@ -10,6 +10,9 @@ Instead of defining behaviour in `loop()` and `if` statements, the objective was
 
 This exercise links my Arduino practice with the _Computer Systems_ course content, turning programming flow control into actual electrical signal relationships.
 
+![Combinational circuit simulating Arduino LED behaviour: switches A and B control LEDs; generator G drives blinking when both are ON. Both A and B are OFF](./Sim_Circuit/demo.gif)
+
+
 ---
 ## Concept and Approach
 
