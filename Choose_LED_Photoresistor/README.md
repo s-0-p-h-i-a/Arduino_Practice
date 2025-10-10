@@ -7,19 +7,17 @@ This Arduino project lets the user control two LEDs using either a push button o
 This project served as basis for practicing applying digital logic and boolean algebra theory.
 See the [Digital Logic](./Digital_Logic) folder for combinational logic circuit simulation and boolean function analysis.
 
-### Demo
+---
+### Demo & Diagrams:
 
 ![Breadboard with two LEDs, one button, and one photoresistor connected to Arduino UNO](./Diagrams/PR_button_small.gif)
 
----
-## Diagrams and Demo:
+![Breadboard with two LEDs, one button, and one photoresistor connected to Arduino UNO](./Diagrams/choose_led_button_pr_wiring.png)
 
-- [Wiring diagram PNG](./Diagrams/choose_led_button_pr_wiring.png) *Coming Soon*
-- [Circuit diagram PDF](./Diagrams/choose_led_button_pr_circuit.pdf) *Coming Soon*
+- [Wiring diagram PNG](./Diagrams/choose_led_button_pr_wiring.png)
+- [Schematic PDF](./Diagrams/choose_led_button_pr_circuit.pdf)
 - [Large demo GIF](./Diagrams/PR_button.gif)
-
-## Tinkercad:
-- [Diagrams & Simulation](LINK_HERE) *Coming Soon*
+- [Tinkercad Simulation](https://www.tinkercad.com/things/jsYlz6c3gEr-pr-button-leds?sharecode=-ilognyc5JtOtq1TzNFPMRr5hzVQ9PlOq6Me02jovhg)
 
 ---
 ## Components:
