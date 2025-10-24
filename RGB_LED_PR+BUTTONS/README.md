@@ -1,10 +1,8 @@
 # RGB LED + Photoresistor + Buttons
 
 ## Goal:
-Control an RGB LED using two buttons and a photoresistor, combining **digital** and **analog** inputs.  
-
-Originally, the project aimed to regulate brightness dynamically through **Serial input** + **photoresistor** feedback, but hardware limitations turned it into a valuable debugging and systems behaviour study.
-
+Control an RGB LED using two buttons and a photoresistor, combining digital and analog inputs.
+Initially intended for Serial-based PWM brightness control, the project evolved into a debugging and signal-processing study analyzing photoresistor response, smoothing behaviour, and hardware timing limits.
 ---
 ## Demo & Diagrams
 
