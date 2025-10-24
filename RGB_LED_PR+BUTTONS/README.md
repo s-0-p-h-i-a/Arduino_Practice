@@ -8,6 +8,8 @@ Originally, the project aimed to regulate brightness dynamically through **Seria
 ---
 ## Demo & Diagrams
 
+![GIF of breadboard with an RGB LED and one photoresistor connected to Arduino UNO, with Serial Plotter data visualisation on a laptop](./Diagrams/RGB_PR_3.gif)
+
 ![Breadboard with an RGB LED, two buttons, and one photoresistor connected to Arduino UNO](./Diagrams/RGB_LED_PR_diag.png)
 
 - [Wiring diagram PNG](./Diagrams/RGB_LED_PR_diag.png)
