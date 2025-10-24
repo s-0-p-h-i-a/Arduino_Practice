@@ -1,16 +1,16 @@
 # RGB LED Hysteresis + Serial Plotter Experiment
 **Date:** 10–11 October  
-**Hardware:** RGB LED (common cathode), photoresistor, Arduino R3
+**Hardware:** RGB LED (common cathode), resistors, photoresistor, Arduino R3
 
 ---
 ## Goal
-Regulate the RGB LED color and intensity using a **photoresistor** as input and visualize behavior via the **Serial Plotter**.  
-Originally an offshoot of the “RGB_LED_PR+BUTTONS” project, this version focuses on **sensor-driven hysteresis** and signal smoothing.
+- Regulate the RGB LED color and intensity using a photoresistor as input and visualize behavior via the Serial Plotter.  
+Originally an offshoot of the RGB_LED_Photoresistor project, this version focuses on data visualisation, sensor-driven hysteresis and signal processing.
+
 ---
 ## Diagram & Demo GIFs
 
 ![Breadboard with an RGB LED and one photoresistor connected to Arduino UNO](Diagram.png)
-
 
 - [Large demo GIF: ](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/RGB_LED_PR%2BBUTTONS/Diagrams/RGB_PR_2.gif) hysteresis experiment
 - [Large demo GIF: ](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/RGB_LED_PR%2BBUTTONS/Diagrams/RGB_PR_3.gif) Serial Plotter view of raw + smoothed photoresistor value, and red + green channel values
@@ -63,22 +63,22 @@ Sensor_Value:XX, Average_Value:XX, Red_Level:XX, Green_Level:XX
 ## Debug Log Highlights
 - Rewiring reduced interference and flicker.
 - Serial input timing required careful delay placement; now stable.
-- Switching to PWM pins enabled analog brightness control attempts.
+- Switching to PWM pins enabled analog brightness control.
 - Averaging introduced smoother transitions, better for plotting.
-- Button inputs scaled by ×300 to visualize state changes on Serial Plotter.
+- Removed code: button inputs scaled by ×300 to visualize state changes on Serial Plotter along with the other displayed values.
 - Offset tuning (−100, −200) created clearer red/green activation ranges.
 - Brightness modulation still limited by LED’s physical response (possible cutoff threshold).
 
 ---
 ## Lessons & Next Steps
-- Explore **moving average smoothing** (multi-sample window) for steadier hysteresis.
+- Explore moving average smoothing and edge case handling for steadier hysteresis.
 - Test individual color LEDs for isolated brightness gradation.
 - Consider defining hysteresis thresholds dynamically (e.g., `greenON` and `redON` with buffer zones).
 - Integrate buttons again for manual override / mode switching.
 
 ---
-**Summary:**  
-This experiment established a working proof-of-concept for combining analog sensor data with PWM-driven RGB output and live signal visualization. It also highlighted the limits of LED hardware brightness control and the importance of careful wiring and timing + averaging in sensor-driven feedback loops.
+## Summary:  
+This experiment established a working proof-of-concept for combining analog sensor data with PWM-driven RGB output and live signal visualisation. It also highlighted the limits of LED hardware brightness control and the importance of careful wiring and timing + averaging in sensor-driven feedback loops.
 
 ---
 ## Documentation Workflow & AI Assistance
