@@ -25,7 +25,7 @@ Notes:
 
 Debug Log Summary:
 - Fixed LED instability by rewiring (reduced interference/flicker)
-- Discovered RGB LED does not support true brightness control (binary ON/OFF cutoff ~128)
+- RGB LED behaves as if it does not support true brightness control (binary ON/OFF cutoff ~128)
 - Timing issues caused Serial input lag and missed reads
 - Adjusted delay placement (before/after getLevel) to synchronise Serial I/O and logic flow
 - Learned to identify delay-related I/O timing interference and manual workaround points.
