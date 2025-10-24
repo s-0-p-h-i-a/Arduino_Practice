@@ -22,7 +22,7 @@ Each project lives in its own folder and includes:
 
 | Project | Description |
 |--------|-------------|
-| [RGB_LED_Photoresistor](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/RGB_LED_Photoresistor) | Control an RGB LED via photoresistor and buttons, signal processing and PWM practice. |
+| [RGB_LED_Photoresistor](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/RGB_LED_PR+BUTTONS) | Control an RGB LED via photoresistor and buttons, signal processing and PWM practice. |
 | [Choose_LED_Photoresistor](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Photoresistor) | Control LEDs using a push button and a photoresistor. Handles single-input and dual-input scenarios, including blinking both LEDs when both inputs are active. Focus on boolean logic, analog/digital reading, and loop management. |
 | [Choose_LED_Buttons](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Buttons) | Control LEDs using two physical buttons. Each button lights up a dedicated LED, with direct response to presses. Includes learning of wiring, input reading, and logical branching. |
 | [Choose_LED_Serial](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Serial) | User chooses LED to light up via serial input. Includes input validation and LED feedback. |
