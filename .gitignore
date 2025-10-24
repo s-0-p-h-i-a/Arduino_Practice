@@ -20,4 +20,4 @@
 
 # Arduino IDE folders
 .build/
-.arduino/
+.arduino/.idea/

@@ -22,21 +22,24 @@ Each project lives in its own folder and includes:
 
 | Project | Description |
 |--------|-------------|
-| `choose_LED_serial` | User chooses LED to light up via serial input. Includes input validation and LED feedback. |
-| `choose_LED_buttons` | Control LEDs using two physical buttons. Each button lights up a dedicated LED, with direct response to presses. Includes learning of wiring, input reading, and logical branching. |
-| `choose_LED_buttons_photoresistor` | Control LEDs using a push button and a photoresistor. Handles single-input and dual-input scenarios, including blinking both LEDs when both inputs are active. Focus on boolean logic, analog/digital reading, and loop management. |
+| [RGB_LED_Photoresistor](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/RGB_LED_Photoresistor) | Control an RGB LED via photoresistor and buttons, signal processing and PWM practice. |
+| [Choose_LED_Photoresistor](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Photoresistor) | Control LEDs using a push button and a photoresistor. Handles single-input and dual-input scenarios, including blinking both LEDs when both inputs are active. Focus on boolean logic, analog/digital reading, and loop management. |
+| [Choose_LED_Buttons](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Buttons) | Control LEDs using two physical buttons. Each button lights up a dedicated LED, with direct response to presses. Includes learning of wiring, input reading, and logical branching. |
+| [Choose_LED_Serial](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Serial) | User chooses LED to light up via serial input. Includes input validation and LED feedback. |
 
 ---
-## Future Project Ideas
+## In Progress/Planned:
 
-- `hall_sensor_emulator`: Simulate flywheel pulses for basic RPM calculator, including preventive mechanism that shuts off motor above defined RPM limit.
+- **Hall Sensor Emulation:** RPM calculator using Hall sensor module, magnet and servo motor. PoC in progress.
+- **Wheatstone Bridge Emulation:** breadboard components-based electricity learning practice.
 
 ---
 ## Tech Stack
 
-- Elegoo Uno + basic breadboard components  
+- Elegoo Uno + basic breadboard components
+- Sensor modules
 - C++ (Arduino-flavoured)  
-- Serial Monitor  
+- Arduino IDE: Serial Monitor + Plotter
 
 ---
 ## Learning Approach
