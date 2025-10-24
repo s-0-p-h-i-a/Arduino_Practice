@@ -30,9 +30,9 @@ Each project lives in its own folder and includes:
 | [Choose_LED_Serial](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Serial) | User chooses LED to light up via serial input. Includes input validation and LED feedback. |
 
 ---
-## In Progress/Planned:
+## Related/In Progress:
 
-- **Hall Sensor Emulation:** RPM calculator using Hall sensor module, magnet and servo motor. PoC in progress.
+- [Flywheel RPM Hall Sensor Emulation](https://github.com/s-0-p-h-i-a/Flywheel_RPM_Hall_Sensor) RPM calculator using Hall sensor module, magnet and servo motor. PoC in progress.
 - **Wheatstone Bridge Emulation:** breadboard components-based electricity learning practice.
 
 ---
