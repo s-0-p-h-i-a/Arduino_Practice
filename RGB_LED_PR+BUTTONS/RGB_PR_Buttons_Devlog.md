@@ -26,7 +26,7 @@
 
 4. **Debugging Embedded Hardware**
    - Diagnosing flicker and signal instability caused by wiring layout and LED behaviour.
-   - Learning hardware limitations (RGB LED binary cutoff at ~128).
+   - Exploring hardware and signal limitations: using delay () to find the run time discrepancy between sketch and Serial output/input.
 
 5. **Program Structure**
    - Modularised input reading via `getLevel()` function.
@@ -45,7 +45,7 @@
 
 - **Challenges Observed:**
   - Serial input was unreliable: sometimes skipped prompts or values read as `0`.
-  - PWM on RGB LED legs ineffective; hardware only supports full ON/OFF states.
+  - PWM on RGB LED legs ineffective; hardware behaved as though it supports full ON/OFF states.
   - Flickering caused by wiring layout and grounding issues.
   - Timing mismatches between Serial reads, loop iteration, and analog readings.
 
@@ -56,16 +56,16 @@
   - Experimented with progressive feature removal to isolate issues.
 
 ### 2. Intermediate Insights
-- LED hardware limitation made dynamic brightness control infeasible.
+- LED PWM function initially unusable.
 - Serial input timing can interfere with real-time button/analog input loop.
 - Incremental testing (removing features, adding debug prints) is more effective than guessing.
 
 ### 3. Final Working Version
-- Simplified design to respect hardware constraints:
+- Simplified design to respect apparent hardware/wiring constraints:
 	- Buttons now toggle red and green LEDs directly (ON/OFF).
 	- Photoresistor triggers blue LED when light is below threshold.
 - Achieved stable, predictable behaviour.
-- Key lessons: timing, hardware limits, input/output coordination.
+- Key lessons: timing, hardware/wiring limits, input/output coordination.
 
 ---
 ## Program Structure Overview
@@ -166,7 +166,7 @@ void loop() {
 ---
 ## Next Steps
 
-- Use PWM-capable LEDs to restore analog brightness control.
+- Figure out how to use PWM-capable LEDs to restore analog brightness control.
 
 - Implement non-blocking Serial input for real-time user interaction.
 

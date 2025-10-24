@@ -8,16 +8,14 @@ Originally, the project aimed to regulate brightness dynamically through **Seria
 ---
 ## Demo & Diagrams
 
-**Demo GIF to be added**
-![Breadboard with an RGB LED, two buttons, and one photoresistor connected to Arduino UNO](./Diagrams/RGB_PR_BUTTONS_small.gif)
+![Breadboard with an RGB LED, two buttons, and one photoresistor connected to Arduino UNO](./Diagrams/RGB_LED_PR_diag.png)
 
-**Wiring diagram to be added**
-![Breadboard with an RGB LED, two buttons, and one photoresistor connected to Arduino UNO](./Diagrams/RGB_PR_BUTTONS_wiring.png)
-
-- [Wiring diagram PNG](./Diagrams/RGB_PR_BUTTONS_wiring.png) _Coming soon_
-- [Schematic PDF](./Diagrams/RGB_PR_BUTTONS_circuit.pdf) _Coming soon_
-- [Large demo GIF](./Diagrams/RGB_PR_BUTTONS.gif) _Coming soon_
-- [Tinkercad Simulation](https://www.tinkercad.com/things/jsYlz6c3gEr-pr-button-leds?sharecode=-ilognyc5JtOtq1TzNFPMRr5hzVQ9PlOq6Me02jovhg) _Coming soon_
+- [Wiring diagram PNG](./Diagrams/RGB_LED_PR_diag.png)
+- [Schematic PDF](./Diagrams/RGB_LED_PR.pdf)
+- [Large demo GIF:](./Diagrams/RGB_PR_1.gif) main project
+- [Large demo GIF: ](./Diagrams/RGB_PR_2.gif) hysteresis experiment
+- [Large demo GIF: ](./Diagrams/RGB_PR_3.gif) Serial Plotter view of raw + smoothed photoresistor value, and red + green channel values
+- [Tinkercad Simulation](https://www.tinkercad.com/things/jsYlz6c3gEr-pr-button-leds?sharecode=-ilognyc5JtOtq1TzNFPMRr5hzVQ9PlOq6Me02jov)
 
 ---
 ## Components
@@ -50,7 +48,7 @@ This project was an **embedded programming and debugging exercise**, not just a 
 
 - **Hardware debugging**
   - Diagnosed flickering and noise caused by wiring proximity and grounding.
-  - Identified LED hardware limitation: channels did not support analog brightness (binary cutoff around 128).
+  - RGB channels behaved as if they did not support analog brightness (binary cutoff around 128).
 
 - **System reasoning**
   - Learned to isolate faulty behaviour by progressively disabling subsystems (e.g., serial input, button loop).
@@ -69,6 +67,7 @@ This project was an **embedded programming and debugging exercise**, not just a 
   2. Stay in a behaviour loop reacting to buttons and photoresistor input.
   3. Exit on Serial input activity.
 - Included modularised function `getLevel()` for reading and validating user brightness values.
+- Started with blocking Serial read using delay(), stuck with this format to experiment and find out how much delay is needed to adapt sketch runtime with Serial lag
 #### Main functions:
 | Function | Purpose |
 |-----------|----------|
@@ -99,6 +98,24 @@ Simplified to direct binary control due to LED limitations:
 - See Dev Log for snippet
 
 ---
+### **3. Signal Processing + Hysteresis + Serial Plotter version**
+
+- File: [Plotter_and_Hysteresis/PR_buttons_RGB_test2.ino](./Plotter_and_Hysteresis/PR_buttons_RGB_test2.ino)
+
+#### Overview:
+- Uses photoresistor input to drive **smoothed LED output** via PWM.
+- Red and green channels scale with sensor input, with discrete thresholds to simulate hysteresis.
+- Serial output visualized in Serial Plotter for debugging and analysis.
+
+#### Behaviour logic:
+| Input | Effect |
+|--------|---------|
+| Photoresistor low | Red LED brighter, blue LED near max |
+| Photoresistor mid | Green LED activates in defined range, blue LED dims |
+| Photoresistor high | Blue LED decreases, red/green adjust according to thresholds |
+| Serial input | (optional) can define red/green target levels |
+
+---
 # Lessons Learned
 
 Hardware constraints matter:
@@ -116,11 +133,9 @@ Incremental testing is critical:
 ---
 # Next Steps
 
-Use a true RGB LED with PWM support or three separate LEDs for brightness-level control.
-
 Reintroduce getLevel() and Serial control for adjustable brightness.
 
-Explore non-blocking Serial reads and proper event-driven handling.
+Use non-blocking Serial reads and proper event-driven handling.
 
 Document each test cycle systematically (Dev Log).
 
