@@ -1,11 +1,11 @@
-#ANALOG I/O + DATA LOGGING PROJECT
+# ANALOG I/O + DATA LOGGING PROJECT
 
 This project consists of a system with 2 MCUS and I/O peripherals connected via UART:
 	- A control MCU that creates output based on user input and periodically sends data to the data logger MCU
 	- Data logger MCU receives control system snapshots and processes it for visual display
 
 ---
-#I/O MCU
+# I/O MCU
 
 This MCU combines analog input from a water level sensor, a joystick and a potentiometer to control an RGB LED.
 Each input source controls the brightness of one RGB LED leg. The joystick can either control the red colour brightness or make it blink at full brightness.
@@ -15,7 +15,7 @@ It uses input and error handling modules to ensure proper execution.
 I/O data is collected and processed for serial monitor display and transmission to a data logger MCU via UART.
 Serial monitor visualisation is used to support hw/sw integration and debugging.
 
-##Folder Structure & System Status:
+## Folder Structure & System Status:
 - analog_io folder: user I/O MCU first draft code, compiled but not verified
 - test folder: test scripts for progressive testing, fixing and reintegration of first draft code 
 
@@ -35,45 +35,45 @@ The data logger output is then: { 256, 1, 1, 1, 1 }
 This test excludes all other mechanisms in the I/O + data logging system project and simply focuses on validating UART data transmission.
 
 ---
-#SYSTEM
-##INPUT
+# SYSTEM
+## INPUT
 - Joystick (analog 0-1023)
 - Water level sensor (analog 0-1023)
 - Potentiometer (analog 0-1023) 
 
-##OUTPUT
+## OUTPUT
 - RGB LED (PWM 0-255)
 
 Red = Joystick, Green =  Water level sensor, Blue = Potentiometer
 
 ---
-##OUTPUT
-###Joystick
+## OUTPUT
+### Joystick
 - Neutral (511 ± hyst) = red OFF
 - Up (±511 - 1023) -> red goes from 0 to 255
 - Down (±511 - 0) -> red blinks progressively faster, delay 1000ms to 20 ms
 
-###Water level sensor
+### Water level sensor
 - 0 = green 0 <-> 1023 = green 255
 
-###Potentiometer
+### Potentiometer
 - 0 = blue 255 <-> 1023 = blue 0
 
 ---
-##STRUCTURE
-###Main program
+## STRUCTURE
+### Main program
 - Hardware input interfaces read data from analog input sources
 - Red light/joystick has intermediary mode selection module
 - Control interfaces for each colour take read data, process it and use for individual RGB leg actuation
 - Main RGB module calls individual colour control functions
 - Main calls RGB control function
 
-###Input handling and error tracking
+### Input handling and error tracking
 - Independent joystick input error handling system
 - Range handling module prevents values outside of valid ranges
 - Error reports module generates error report array every loop using error codes
 
-###Data transmission
+### Data transmission
 - Analog uint16 values from input sources are bit-packed into a 3 element uint8 array:
 	- input value / 255 (integer division)
 	- input value % 255
@@ -85,13 +85,13 @@ Red = Joystick, Green =  Water level sensor, Blue = Potentiometer
 	- 2x joystick system status: error status code, error counter
 	- 4x system data: whole system status code, 3x colour control status codes
 
-###Helper libraries
+### Helper libraries
 - Main raw data handling interface
 - Data processing for arduino IDE serial plotter display
 - Data processing for data logger MCU
 
 !! NOT UPDATED !!
-###Dependencies
+### Dependencies
 - Hardware:
 	- Input reading only modules, do not include anything
 - Red light:
@@ -135,8 +135,8 @@ Red = Joystick, Green =  Water level sensor, Blue = Potentiometer
 
 ---
 !! NOT UPDATED !!	
-##BEHAVIOUR
-###Intended execution path
+## BEHAVIOUR
+### Intended execution path
 A loop cycle starts:
 - (main.ino) -> main calls RGB control function in void loop
 	- (rgb_led.cpp) -> central RGB control function calls control function from a colour
@@ -149,7 +149,7 @@ A loop cycle starts:
 *red control function calls both hardware input function and signal processing function
 
 !! NOT UPDATED !!
-###Safety
+### Safety
 - Range handling header:
 	- limitToAnalogMax for hardware input values, max 1023
 	- limitToRGBMAX for translated input values, max 255
@@ -158,13 +158,13 @@ A loop cycle starts:
 - Red light control module as sandbox to brainstorm error handling
 
 !! NOT UPDATED !!
-###Visualisation & data logging
+### Visualisation & data logging
 - Raw data interface takes I/O values
 - Data processing (plotter): shifts/amplifies data for clear plotter visuals
 - Data processing (logger): provides data for transmission via UART
 
 ---
-#TO-DO:
+# TO-DO:
 I/O MCU:
 - Update functions index, README and dev notes
 - Compile checks/reviews

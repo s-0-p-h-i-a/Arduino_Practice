@@ -1,11 +1,11 @@
-#ANALOG I/O + DATA LOGGING PROJECT
+# ANALOG I/O + DATA LOGGING PROJECT
 
 This project consists of a system with 2 MCUS and I/O peripherals connected via UART:
 	- A control MCU that creates output based on user input and periodically sends data to the data logger MCU
 	- Data logger MCU receives control system snapshots and processes it for visual display
 
 ---
-#Data logger MCU
+# Data logger MCU
 
 This MCU periodically receives 8-bit system data arrays, processes it into a local array and displays the data on the console and on an 8x8 LED matrix.
 
@@ -33,24 +33,24 @@ The data logger output is then: { 256, 1, 1, 1, 1 }
 This test excludes all other mechanisms in the I/O + data logging system project and simply focuses on validating UART data transmission.
 
 ---
-#SYSTEM
-##INPUT
+# SYSTEM
+## INPUT
 - System data from I/O MCU
 
-##OUTPUT
+## OUTPUT
 - Prints all transmitted data, formatted, onto console
 - Writes data snapshots onto text file
 - Matrix displays input and colour control value levels, clamped to [0,8]
 
 ---
-##STRUCTURE
-###Main program
+## STRUCTURE
+### Main program
 - Reads input from serial, builds 'raw' input data array
 - Processes data -> local data array
 - Console output: prints data to console
 - Matrix output: shows I/O data on LED matrix
 
-###Data reception
+### Data reception
 - Analog uint16 values from input sources arrives bit-packed into 3 element uint8 array chunks:
 	- input value / 255 (integer division)
 	- input value % 255
@@ -61,7 +61,7 @@ This test excludes all other mechanisms in the I/O + data logging system project
 	- 2x joystick system status: error status code, error counter
 	- 4x system data: whole system status code, 3x colour control status codes
 
-###Data Output
+### Data Output
 - Console:
 	- Local data array + reference files -> 2 display matrices: one for titles, one with data
 - Matrix:
@@ -69,13 +69,13 @@ This test excludes all other mechanisms in the I/O + data logging system project
 	- I/O data clamped to [0, 8], variables are each assigned one column
 	- Level 0: lights off, level 8: whole column on 
 
-###Helper files
+### Helper files
 - Received data processing: builds local array
 - Display data arrays: builds title + data arrays for console display
 - Console display and error codes interfaces: libraries of strings to build titles array
 
 !! NOT UPDATED !!
-###Dependencies
+### Dependencies
 - Structure:
 	- data_reception_interface.cpp: receives data, builds received data array
 	- data_processing_interface.cpp: processes received data array, builds local data array
@@ -87,7 +87,7 @@ This test excludes all other mechanisms in the I/O + data logging system project
 	- main .ino: calls readSystemSnapshot(), displayDataConsole(), displayDataMatrix()
 
 
-###Execution path example (console)
+### Execution path example (console)
 - main .ino: main loop() calls readSystemSnapshot() from system_snapshot.cpp
 	- -> system_snapshot.cpp: readSystemSnapshot() calls buildLocalArray() from data_processing_interface.cpp
 		- -> data_processing_interface.cpp: buildLocalArray() calls receiveDataArray() from data_reception_interface.cpp

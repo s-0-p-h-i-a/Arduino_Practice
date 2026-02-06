@@ -1,15 +1,16 @@
-#ANALOG I/O + DATA LOGGING PROJECT
+# ANALOG I/O + DATA LOGGING PROJECT
 
 This project consists of a system with 2 MCUS and I/O peripherals connected via UART:
-	- An I/O control MCU that creates output based on user input and periodically sends data to the data logger MCU
-	- Data logger MCU receives control system snapshots and processes it for visual display
+
+-  An I/O control MCU that creates output based on user input and periodically sends data to the data logger MCU
+- Data logger MCU receives control system snapshots and processes it for visual display
 
 Project navigation:
 - Current/latest work for each MCU is IO_MCU and Data_Logger_MCU folders
 - Previous drafts/iterations in Previous_Drafts folder
 
 ---
-##Project Status
+## Project Status
 - First draft code complete and compile reviewed
 - Rebuilding working code through test plan and test scripts
 - Current test in progress:
@@ -28,8 +29,9 @@ The data logger output is then: { 256, 1, 1, 1, 1 }
 This test excludes all other mechanisms in the I/O + data logging system project and simply focuses on validating UART data transmission.
 
 ---	
-#SYSTEM
-##MCUs
+# SYSTEM
+
+## MCUs
 1. I/O control MCU:
 	- Input: potentiometer, joystick, water level sensor
 	- Output: RGB LED legs
@@ -44,7 +46,7 @@ This test excludes all other mechanisms in the I/O + data logging system project
 		- Data is processed into system snapshots that are displayed on the console
 		- Data is processed into actuator data to control an 8x8 LED Matrix
 
-##DATA	
+## DATA	
 - Transmitted data:
 	- I/O data:
 			- Analog input values
@@ -57,15 +59,16 @@ This test excludes all other mechanisms in the I/O + data logging system project
 			- Overall system status code
 			- Individual status codes for each RGB LED leg
 
-##REQUIREMENTS
-###Implementation goals
+## REQUIREMENTS
+
+### Implementation goals
 - Limit data and function execution scopes+lifecycles to only when relevant/necessary
 - Direct paths from input to actuation
 - Limit dependencies
 - Clear roles for each module
 - Clear and readable semantics
 
-###Intended system type
+### Intended system type
 - The design choices are influenced by:
 	- Performance-oriented control firmware (eg motorsports ECU)
 	- Portability for future fault injection integration
@@ -75,10 +78,11 @@ This test excludes all other mechanisms in the I/O + data logging system project
 	- Integrate error + undefined behaviour prevention/handling
 
 ---
-#LEARNING GOALS
+# LEARNING GOALS
+
 The goal of this project is to create a comprehensive sandbox to practice various SWE concepts + start learning hardware communications.
 
-##Learning topics
+## Learning topics
 - System structure design:
 	- Architecture
 	- Dependencies
@@ -110,29 +114,29 @@ The goal of this project is to create a comprehensive sandbox to practice variou
 	- Creating mental model and implementing system security measures with future fault injection in mind
 
 ---
-#PROCESS
-##Planning
+# PROCESS
+## Planning
 - Define:
 	- Desired behaviour
 	- Program structure
 	- Dependencies
 - Map out intended execution paths
 
-##Initial development
+## Initial development
 - Build base: input, colour control and LED control modules, main .ino file
 - Integrate input handling/safety measures
 - Write data interface modules
 - Write data logger MCU code
 
-##SW Review
+## SW Review
 - Compile checks:
 	- Start with only one input + colour control combination, LED, and safety modules (green or blue for simplicity)
 	- Add the 2 other input + colour control systems
 	- Add data interfaces
 	- Check data logger MCU
 
-##HW/SW integration
-###Communication:
+## HW/SW integration
+### Communication:
 - Run test plan to progressively build toward validated communication between TX and RX without user input
 
 ###Control response:
@@ -146,19 +150,19 @@ The goal of this project is to create a comprehensive sandbox to practice variou
 	- Level 3: integrate rest of system
 
 ---
-#TO-DO:
-##FULL SYSTEM:
+# TO-DO
+## FULL SYSTEM:
 - Communication integration
 
-##I/O MCU: 
+## I/O MCU: 
 - HW/SW integration: one MCU + serial plotter display
 - Update README, dev notes/log, functions index
-	
-##DATA LOGGER MCU:
+
+## DATA LOGGER MCU:
 - Start documentation
 - Functions index
 
-##DOCUMENTATION
+## DOCUMENTATION
 - Make structure/execution diagrams
 - Make state diagrams:
 	- FSMs: colour control, error handling
