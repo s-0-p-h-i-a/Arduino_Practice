@@ -2,7 +2,7 @@
 
 System integration process notes.
 
-See I/O MCU dev diary and Data Logger MCU dev diary for respective process logs.
+See [I/O MCU dev diary](https://github.com/s-0-p-h-i-a/Arduino_Practice/blob/main/Analog_IO%2BData_Logger/IO_MCU/dev_diary.md) and [Data Logger MCU](https://github.com/s-0-p-h-i-a/Arduino_Practice/blob/main/Analog_IO%2BData_Logger/Data_Logger_MCU/dev_diary.md) dev diary for respective process logs.
 
 ---
 ## 02/02
