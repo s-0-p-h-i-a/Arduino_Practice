@@ -1,18 +1,18 @@
-##24/01
+## 24/01
 - Data receive, data unpack, system snapshot build, data display console, data display matrix modules started
 
 ---
-##25/01
+## 25/01
 - Finished 1st draft of data logger MCU code .cpp files
 
-###Structure:
+### Structure:
 	- data_reception_interface.cpp: receives data, builds received data array
 	- data_processing_interface.cpp: processes received data array, builds local data array
 	- system_snapshot.cpp: builds system snapshot from local data array
 	- data_processing_*.cpp: displays system snapshot on console, displays analog input + colours data on LED matrix
 	- main .ino: calls readSystemSnapshot(), displayDataConsole(), displayDataMatrix()
 	
-###Execution path example (console):
+### Execution path example (console):
 - main .ino: main loop() calls readSystemSnapshot() from system_snapshot.cpp
 	- -> system_snapshot.cpp: readSystemSnapshot() calls buildLocalArray() from data_processing_interface.cpp
 		- -> data_processing_interface.cpp: buildLocalArray() calls receiveDataArray() from data_reception_interface.cpp
@@ -33,11 +33,11 @@
 - back to main .ino, calls displayDataMatrix, same path
 
 ---
-##26/01
+## 26/01
 - Wrote data display and error message parsing + display modules
 
 ---	
-##27/01
+## 27/01
 - Data processing interface previously generated 3 separate array for the bit packed data from each input (pot, joystick, water sensor)
 - Now it builds one [9] array and unpack bits func generates uint16 value out of any given 3 elements
 - In buildLocalDataArray: j = i * BITPACKED_UNIT_SIZE; indices used inside for loop.

@@ -1,12 +1,12 @@
-#DEVELOPMENT NOTES
-##22/01
+# DEVELOPMENT NOTES
+## 22/01
 - First draft code written for I/O system, basic scaffolding for data interfaces
 - First README version done
 - Functions index: complete for all first draft modules, no data interfaces yet
 - Idea: implement flag for when a value has to be capped to fit valid range, as part of range handling system
 
 ---
-##23/01
+## 23/01
 - Capped value flag implementation:
 	- Inside each colour control module:
 		- bool cappedToAnalogMaxBLUE, cappedToRGBMaxBLUE variables
@@ -26,7 +26,7 @@
 - Data processing for the logger: wrote 16- to 8-bit packer
 
 ---
-##24/01
+## 24/01
 I/O:
 - Plotter display module
 - Error reports: change functions so a system error report array is generated at every loop
@@ -43,7 +43,7 @@ I/O:
 	- Added errors to logger transmission
 
 ---	
-###26/01
+### 26/01
 - General + red system error handling modules rework:
 	- Improve layers and concerns separation
 	- limittoanalog and limittorgb funcs now static and only called inside clamp func
@@ -80,13 +80,13 @@ I/O:
 - Modular system design helps with ongoing refactors
 
 ---
-##27/01
+## 27/01
 - Finished and compiled data logger code
 - Started writing data logger mcu documentation
 - Started updating i/o mcu documentation
 
 ---
-##30/01
+## 30/01
 - Start compile review
 - Compile process changes:
 	- Data processing (for logger):

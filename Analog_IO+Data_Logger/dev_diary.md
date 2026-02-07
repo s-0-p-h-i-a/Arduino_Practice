@@ -1,14 +1,14 @@
-#DEVELOPMENT NOTES
+# DEVELOPMENT NOTES
 
 System integration process notes.
 
 See I/O MCU dev diary and Data Logger MCU dev diary for respective process logs.
 
 ---
-##02/02
+## 02/02
 
-###UART COMMUNICATION TESTING
-###Write tests using code from I/O MCU:
+### UART COMMUNICATION TESTING
+### Write tests using code from I/O MCU:
 
 - Test 0: send + receive just 1 const int, only console display, no matrix
 - Test 1: send + receive const array of 5 1's
@@ -20,7 +20,7 @@ See I/O MCU dev diary and Data Logger MCU dev diary for respective process logs.
 - Test 5: pack numbers > 255, other elements constant
 - Test 6 (final): random numbers <= 1023 for bit-packing elements, random <= for the rest
 
-###Testing process:
+### Testing process:
 - Test 1: both MCUs compiled + uploaded, but communication did not work
 	- Solution: Test 0 : send + receive just 1 const int, only console display, no matrix
 	
@@ -35,8 +35,8 @@ See I/O MCU dev diary and Data Logger MCU dev diary for respective process logs.
 		- Snapshot counter + timer now working, still seeing ascii value numbers
 
 ---
-##04/02
-###Test 0 debugging continued
+## 04/02
+### Test 0 debugging continued
 - 3 ideas:
 	1. Serial monitor display file did not include stdint -> getreceivedinteger returned uint8, serial.print interpreted it as char?
 	2. Try just sending + receiving + displaying data as char?
@@ -102,14 +102,14 @@ See I/O MCU dev diary and Data Logger MCU dev diary for respective process logs.
 - Trying swapping serial.println for .write: now it works!! It was about .println vs .write all along
 - Conclusion: sending char seems to keep the serial buffer open for longer?
 
-###Moving on to test 1
+### Moving on to test 1
 - Test 1 (const array[5] of 1's): succeeded!!
 
 ---
-##06/02
-###Test 2:
+## 06/02
+### Test 2:
 - Produced no output at first
-####TX side:
+#### TX side:
 - Removed checkIfArrayNotGenerated() call to focus on just TX->RX
 - Wrote sendDataToPlotter func and added static snapshot counter var in i+o module to view the data getting transmitted
 - Used console display func from logger mcu as template
@@ -196,6 +196,7 @@ See I/O MCU dev diary and Data Logger MCU dev diary for respective process logs.
 - Choosing to leave this for now as snapshot logic in main project is in receiver mcu and it works there
 - Moving on to integration with rx mcu
 
+#### RX Side:
 - Testing with rx mcu: nothing displayed
 - Start checking at data reception and display layers to check for errors, then follow execution paths in the middle layers
 - Display func was not calling buildLocalArray

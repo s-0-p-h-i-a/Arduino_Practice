@@ -2,7 +2,7 @@
 
 This repository contains Arduino-based projects I develop in my learning trajectory embedded systems, signal handling, and microcontroller programming. Each project focuses on understanding fundamental hardware–software interaction, building confidence with C/C++-based logic, and exploring real-world embedded use cases.
 
-![Breadboard with green and blue LEDs, a button and a photoresistor connected to Arduino UNO](https://github.com/s-0-p-h-i-a/Arduino_Practice/blob/main/Choose_LED_Photoresistor/Diagrams/PR_button_small.gif)
+![Breadboard with green and blue LEDs, a button and a photoresistor connected to Arduino UNO](https://github.com/s-0-p-h-i-a/Arduino_Practice/blob/main/LED_Basics/Choose_LED_Photoresistor/Diagrams/PR_button_small.gif)
 
 ---
 ## Goals
