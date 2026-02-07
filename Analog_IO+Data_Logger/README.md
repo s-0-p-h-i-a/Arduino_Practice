@@ -139,7 +139,7 @@ The goal of this project is to create a comprehensive sandbox to practice variou
 ### Communication:
 - Run test plan to progressively build toward validated communication between TX and RX without user input
 
-###Control response:
+### Control response:
 - Using plotter display:
 	- Start with only one input + colour control
 	- Add the 2 other input + colour combos
