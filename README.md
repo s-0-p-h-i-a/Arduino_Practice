@@ -1,14 +1,14 @@
-# **Arduino Projects — Embedded Systems Practice**
+# **Arduino Projects - Embedded Systems Practice**
 
-This repository contains small Arduino-based projects I’ve developed as the first step of my hands-on learning in embedded systems, signal handling, and microcontroller programming. Each project focuses on understanding fundamental hardware–software interaction, building confidence with C++-based logic, and exploring real-world embedded use cases.
+This repository contains Arduino-based projects I develop in my learning trajectory embedded systems, signal handling, and microcontroller programming. Each project focuses on understanding fundamental hardware–software interaction, building confidence with C/C++-based logic, and exploring real-world embedded use cases.
 
 ![Breadboard with green and blue LEDs, a button and a photoresistor connected to Arduino UNO](https://github.com/s-0-p-h-i-a/Arduino_Practice/blob/main/Choose_LED_Photoresistor/Diagrams/PR_button_small.gif)
 
 ---
 ## Goals
 
-- Practice input/output handling (serial, digital, analog)  
-- Explore embedded control structures with C++  
+- Practice input/output handling (serial, digital, analog) and communications 
+- Explore embedded control structures with C/C++  
 - Gain experience with debugging physical system and code behaviour
 
 ---
@@ -17,31 +17,24 @@ This repository contains small Arduino-based projects I’ve developed as the fi
 Each project lives in its own folder and includes:  
 - `.ino` source file(s)  
 - README and dev log with notes on development process  
-- Diagrams folder with demo GIF, wiring diagram and circuit schematic 
+- Diagrams/Demos folder with demo GIF, wiring diagram and circuit schematic 
 
 ---
 ## Projects
 
-| Project | Description |
-|--------|-------------|
-| [RGB_LED_Photoresistor](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/RGB_LED_PR+BUTTONS) | Control an RGB LED via photoresistor and buttons, signal processing and PWM practice. |
-| [Choose_LED_Photoresistor](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Photoresistor) | Control LEDs using a push button and a photoresistor. Handles single-input and dual-input scenarios, including blinking both LEDs when both inputs are active. Focus on boolean logic, analog/digital reading, and loop management. |
-| [Choose_LED_Buttons](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Buttons) | Control LEDs using two physical buttons. Each button lights up a dedicated LED, with direct response to presses. Includes learning of wiring, input reading, and logical branching. |
-| [Choose_LED_Serial](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Choose_LED_Serial) | User chooses LED to light up via serial input. Includes input validation and LED feedback. |
-
----
-## Related/In Progress:
-
-- [Flywheel RPM Hall Sensor Emulation](https://github.com/s-0-p-h-i-a/Flywheel_RPM_Hall_Sensor) RPM calculator using Hall sensor module, magnet and servo motor. PoC in progress.
-- **Wheatstone Bridge Emulation:** breadboard components-based electricity learning practice.
+| Project                                                                                              | Description                                                                                                              |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| [I/O + Data Logger](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/Analog_IO+Data_Logger) | 2 MCU system with an analog control MCU and a data logger MCU. Practice with error/data logging and UART communications. |
+| [LED Basics](https://github.com/s-0-p-h-i-a/Arduino_Practice/tree/main/LED_Basics)                   | Arduino blinkies/Hello Worlds as first steps in learning microcontroller programming.                                    |
 
 ---
 ## Tech Stack
 
-- Elegoo Uno + basic breadboard components
+- Arduino Uno + basic breadboard components
 - Sensor modules
-- C++ (Arduino-flavoured)  
-- Arduino IDE: Serial Monitor + Plotter
+- C/C++
+- Geany, Make/GCC, Arduino CLI
+- Arduino IDE for Serial Monitor + Plotter
 
 ---
 ## Learning Approach
@@ -57,5 +50,3 @@ Each project lives in its own folder and includes:
 - Manual raw note-taking during development  
 - AI-assisted polishing (README, dev logs)  
 - No code/text is published without full review
-
-
